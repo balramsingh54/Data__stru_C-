@@ -38,11 +38,13 @@ void display(node*head)
 int main(int argc, char const *argv[])
 {
 	node*head=NULL;
+	InsertAtHead(head, 7);
 	InsertAtHead(head, 5);
 	InsertAtHead(head, 4);
 	InsertAtHead(head, 3);
 	InsertAtHead(head, 2);
 	InsertAtHead(head, 1);
+	InsertAtHead(head, 6);
 	display(head);
 	return 0;
 }
