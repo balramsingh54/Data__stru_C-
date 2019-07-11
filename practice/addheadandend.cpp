@@ -49,7 +49,7 @@ void insertAtTail(node*&head,int data){
 int main(int argc, char const *argv[])
 {
 	node* head=NULL;
-	insertAtTail(head,13);
+	insertAtTail(head,13zq);
 	insertAtHead(head,5);
 	insertAtHead(head,4);
 	insertAtHead(head,3);
