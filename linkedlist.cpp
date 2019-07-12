@@ -15,7 +15,6 @@ public:
 		next=NULL;
 	}
 };
-
 void InsertAtHead(node*&head, int data)
 {
 	node* n= new node(data);
