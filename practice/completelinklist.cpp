@@ -61,18 +61,18 @@ int len(node*head)
 	return count;
 }
 
-void insertatposition(node* &head, int value, int position)
+void insertatposition(node* &head, int data, int position)
 {
-	if (head==NULL)
+	if (position==0 || head==NULL || position==1)
 	{
 		insertathead(head,data);
 	}
-	if (position>len)
+	if (position>len(head))
 	{
 		insertattail(head, data);
 	}
 
-	count=1;
+	int count=1;
 	node* temp= head;
 	while(count<position-1)
 	{
@@ -82,20 +82,61 @@ void insertatposition(node* &head, int value, int position)
 
 	node* n = new node(data);
 	n->next=temp->next;
-	temp->=n;
+	temp->next=n;
 }
 
-void delete_head(node*head)
+void delete_head(node*&head)
 {
 	node*temp= head;
-	head = head->head;
-	delete head;
+	head = head->next;
+	delete temp;
 }
 
 void delete_at_end(node*head)
 {
+	node* pre=NULL;
+	node* temp=head;
+	while(temp->next!=NULL)
+	{
+		pre=NULL;
+		temp=temp->next;
+	}
+	delete temp;
+	pre->next=NULL;
 
 }
+
+bool search(node*head, int data)
+{
+	node*temp=head;
+	while(temp!=NULL)
+	{
+		if (temp->data==data)
+		{
+			return true;
+		}
+		temp=temp->next;
+	}
+	return false;
+}
+
+void reverse_iterative(node*&head)
+{
+	node*pre=NULL;
+	node*cur=head;
+	while(cur!=NULL)
+	{
+		node*n=cur->next;
+		cur->next=pre;
+		pre=cur;
+		cur=n;
+	}
+	head=pre;
+
+}
+
+
+
 int main(int argc, char const *argv[])
 {
 	node*head= NULL;
@@ -107,6 +148,13 @@ int main(int argc, char const *argv[])
 	display(head);
 	cout<<endl;
 	insertattail(head,6);
+	// insertatposition(head,333,3);
+	// delete_head(head);
 	display(head);
+	cout<<endl;
+	// cout<<search(head,4);
+	reverse_iterative(head);
+	display(head);
+
 	return 0;
 }
