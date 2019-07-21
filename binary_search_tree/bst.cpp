@@ -2,7 +2,6 @@
 #include <queue>
 #include <cmath>
 #include <climits>
-
 using namespace std;
 
 class node{
@@ -15,6 +14,7 @@ public:
 		this->data = d;
 		left = NULL;
 		right = NULL;
+
 	}
 };
 

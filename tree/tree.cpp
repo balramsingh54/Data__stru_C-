@@ -223,20 +223,24 @@ L2 diameterOptimized(node*root){
 	return val;
 }
 
-node* buildTreeFromArray(int arr[], int s, int e)
+// node* buildTreeFromArray(int arr[], int s, int e)
+// {
+// 	if (root==NULL)
+// 	{
+// 		return;
+// 	}
+// 	int m= (s+e)/2;
+// 	node* root= new node[m];
+// 	root->left=buildTreeFromArray(arr,s,m-1);
+// 	root->right=buildTreeFromArray(arr,m+1,e);
+// 	return root;
+
+// }
+
+node* buildTreeFromInorder_Preorder(int pre[], int in[], int s, int e)
 {
-	if (root==NULL)
-	{
-		return;
-	}
-	int m= (s+e)/2;
-	node* root= new node[m];
-	root->left=buildTreeFromArray(arr,s,m-1);
-	root->right=buildTreeFromArray(arr,m+1,e);
-	return root;
 
 }
-
 
 int main(){
 
@@ -272,7 +276,7 @@ int main(){
 	// cout<<pair.diameter<<endl;
 	// cout<<pair.height<<endl;
 
-	int arr[]={}
+	int arr[]={};
 	return 0;
 }
 
