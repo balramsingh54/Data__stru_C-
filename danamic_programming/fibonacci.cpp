@@ -56,6 +56,6 @@ int main(){
 	cout<<"*******************"<<endl;
 	cout<<fibonacci(n)<<endl;
 	cout<<"********************"<<endl;
-
+	cout<<fibonacci_DP(n)<<endl;
 	return 0;
 }
